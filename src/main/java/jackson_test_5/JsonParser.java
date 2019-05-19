@@ -1,6 +1,7 @@
 package jackson_test_5;
 
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import pojos.Car;
 
@@ -37,6 +38,8 @@ public class JsonParser {
 
 //        Read object from JSON file
         File file = new File("src/main/resources/test5.json");
+        //ignore unknown json fields
+        objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES,false);
         Car carByFile = objectMapper.readValue(file, Car.class);
         System.out.println("Car by file: " + carByFile);
 

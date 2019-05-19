@@ -1,4 +1,5 @@
 {
   "brand": "audi",
-  "doors": 4
+  "doors": 4,
+  "type": "a4"
 }
