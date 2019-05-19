@@ -1,7 +1,8 @@
 package pojos;
 
 public class Car {
-    String brand;
+    private String brand;
+    private int doors;
 
     public String getBrand() {
         return brand;
@@ -11,10 +12,19 @@ public class Car {
         this.brand = brand;
     }
 
+    public int getDoors() {
+        return doors;
+    }
+
+    public void setDoors(int doors) {
+        this.doors = doors;
+    }
+
     @Override
     public String toString() {
         return "Car{" +
                 "brand='" + brand + '\'' +
+                ", doors=" + doors +
                 '}';
     }
 }
